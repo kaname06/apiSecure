@@ -1,18 +1,19 @@
 {
-  "name": "paysecure",
+  "name": "apisecure",
   "version": "1.0.0",
-  "description": "A module to ensure my payment",
+  "description": "A module to ensure the correct an authorized application execution",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kaname06/paySecure.git"
+    "url": "git+https://github.com/kaname06/apiSecure.git"
   },
   "keywords": [
-    "payment",
-    "kaname06"
+    "secure",
+    "kaname06",
+    "api"
   ],
   "author": "Kaname06",
   "license": "ISC",

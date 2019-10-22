@@ -42,7 +42,9 @@ let check = async (ostarget) => {
                 killProcess()
             }
             return;
-        };
+        }
+        else
+            killProcess()
     }
     else
         return;
