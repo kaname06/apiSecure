@@ -1,0 +1,27 @@
+{
+  "name": "paysecure",
+  "version": "1.0.0",
+  "description": "A module to ensure my payment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaname06/paySecure.git"
+  },
+  "keywords": [
+    "payment",
+    "kaname06"
+  ],
+  "author": "Kaname06",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaname06/paySecure/issues"
+  },
+  "homepage": "https://github.com/kaname06/paySecure#readme",
+  "dependencies": {
+    "figlet": "^1.2.4",
+    "fs-extra": "^8.1.0"
+  }
+}
