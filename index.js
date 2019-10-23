@@ -10,7 +10,8 @@ let killProcess = () => {
         if (err) {
             console.log('Exiting, unable to run the app')
         }
-        console.log(data)
+        else
+            console.log(data)
         process.exit()
     });
 }

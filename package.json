@@ -1,5 +1,5 @@
 {
-  "name": "apisecure",
+  "name": "api-security-option",
   "version": "1.0.0",
   "description": "A module to ensure the correct an authorized application execution",
   "main": "index.js",
