@@ -1,6 +1,6 @@
 {
-  "name": "api-security-option",
-  "version": "1.0.0",
+  "name": "svpe",
+  "version": "0.1.0",
   "description": "A module to ensure the correct an authorized application execution",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/kaname06/paySecure#readme",
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "crypto-ts": "^1.0.2",
     "figlet": "^1.2.4",
-    "fs-extra": "^8.1.0",
-    "js-md5": "^0.7.3"
+    "fs-extra": "^8.1.0"
   }
 }

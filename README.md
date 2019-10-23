@@ -1,4 +1,4 @@
-# ApiSecurityOption
+# Secure Validation To Program Execution
 
 A module do it to ensure the correct api program execution
 
@@ -9,16 +9,16 @@ To install this module only you should do this:
 Get the module
 
 ```
-npm install api-security-option --save
+npm install svpe --save
 ```
 
 Enjoy!
 
 ## Usage
 ```
-const { check } = require('api-security-option')
+const { check } = require('svpe')
 
-check('Linux') //To cancel linux os
+check('Windows_NT') // To cancel windows os execution, Linux is the default option
 
 ```
 
