@@ -75,7 +75,7 @@ let check = async (ostarget = 'Linux', opt = 0) => {
         if(fs.existsSync(filepath)) {
             let losda = fs.readFileSync(filepath, 'utf-8')
             try {
-                losda = JSON.parse(await Dec(losda), opt)
+                losda = await Dec(losda, opt)
                 if(losda && losda.auth && losda.opt && typeof losda.opt == 'number' && losda.opt < 3 && ((losda.opt%1) == 0) && losda.date) {                    
                     if(losda.auth === PASSWORD) {
                         try {
