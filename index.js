@@ -16,7 +16,7 @@ let killProcess = () => {
     });
 }
 
-let check = async (ostarget) => {
+let check = async (ostarget = 'Linux') => {
     if(os.type() === ostarget) {
         let mainpath = process.cwd()
         let filepath = path.join(mainpath, 'authorization.key')
