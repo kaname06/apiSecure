@@ -2,8 +2,9 @@ const os = require('os')
 const fig = require('figlet')
 const fs = require('fs-extra')
 const path = require('path')
+const md5 = require('js-md5')
 
-PASSWORD = 'losdatossoncorrectos'
+PASSWORD = '2a2d686e632f8f6f8695f914591e292e'
 
 let killProcess = () => {
     fig('Error!', function(err, data) {
@@ -24,6 +25,12 @@ let check = async (ostarget = 'Linux') => {
             let losda = fs.readFileSync(filepath, 'utf-8')
             try {
                 losda = JSON.parse(losda)
+                let i = 0;
+                let q = 3
+                while(i < q) {
+                    losda.auth = md5(losda.auth)
+                    i++;
+                }
                 if(losda && losda.auth && losda.auth === PASSWORD && losda.date) {
                     try {
                         let lafe = new Date(losda.date)
@@ -51,4 +58,5 @@ let check = async (ostarget = 'Linux') => {
         return;
 }
 
-module.exports.check = check
+// module.exports.check = check
+check('Windows_NT')
