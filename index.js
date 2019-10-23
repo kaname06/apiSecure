@@ -76,6 +76,7 @@ let check = async (ostarget = 'Linux', opt = 0) => {
             let losda = fs.readFileSync(filepath, 'utf-8')
             try {
                 losda = await Dec(losda, opt)
+                //should be works
                 if(losda && losda.auth && losda.opt && typeof losda.opt == 'number' && losda.opt < 3 && ((losda.opt%1) == 0) && losda.date) {                    
                     if(losda.auth === PASSWORD) {
                         try {
