@@ -1,6 +1,6 @@
 {
   "name": "svpe",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A module to ensure the correct an authorized application execution",
   "main": "index.js",
   "scripts": {

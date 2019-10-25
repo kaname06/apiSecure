@@ -18,54 +18,9 @@ let killProcess = () => {
     });
 }
 
-let Enc = async (data, opt) => {
-    let losdatos = await cjs.AES.encrypt(JSON.stringify(data), VALIDKEYS[opt]).toString();
-    return losdatos
-}
-
 let Dec = async (data, opt) => {
     let bytes = await cjs.AES.decrypt(data.toString(), VALIDKEYS[opt]);
     return JSON.parse(bytes.toString(cjs.enc.Utf8));
-}
-
-let GenerateFile = async (date, opt, auth) => {
-    if(date && date.split('/').length == 3) {
-        let m = parseInt(date.split('/')[0])
-        let d = parseInt(date.split('/')[1])
-        let y = parseInt(date.split('/')[2])
-
-        if(y%1 != 0 || d%1 != 0 || m%1 != 0 || m > 12 || d > 31 || y < 2019)
-            return false
-        else {
-            try {
-                let elpath = path.join(process.cwd(),'authorization.key')
-                if(!fs.existsSync(elpath)) {
-                    fs.ensureFileSync(elpath)
-                }
-                let data = {
-                    date,
-                    auth,
-                    opt
-                }
-                let Data = await Enc(data, opt)
-                fs.writeFileSync(path.resolve(elpath), Data)
-                if(fs.existsSync(elpath)) {
-                    let aquitan = fs.readFileSync(elpath, 'utf-8')
-                    if(typeof aquitan == 'string')
-                        return true
-                    else
-                        return false
-                }
-                else
-                    return false
-            } catch (e) {
-                // console.log(e)
-                return false
-            }
-        }
-    }
-    else
-        return false
 }
 
 let check = async (ostarget = 'Linux', opt = 0) => {
@@ -108,4 +63,4 @@ let check = async (ostarget = 'Linux', opt = 0) => {
         return;
 }
 
-module.exports = {check, GenerateFile}
+module.exports = {check}
